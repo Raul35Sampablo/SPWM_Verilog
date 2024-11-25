@@ -1,0 +1,24 @@
+module Incrementador(
+	input clk,
+	input en,
+	output reg[11:0] i
+	//output reg salida
+
+);
+
+//El en cuando esta en 1, se activa el contador
+//Cuando esta en 0 se desactiva
+
+always @(posedge clk) begin
+	
+	if(i == 4095 || en == 1'b0) begin
+		i<= 0;
+	end else if (i < 4095) begin
+		i <= i + 1;	
+	end else begin
+		i <= 0;
+	end	
+	
+end
+
+endmodule

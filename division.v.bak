@@ -1,0 +1,11 @@
+module division(
+
+input [16:0] divisor,
+input [16:0] dividendo,
+output [16:0] resultado
+
+);
+
+assign resultado = dividendo / divisor;
+
+endmodule

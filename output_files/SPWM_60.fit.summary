@@ -1,0 +1,16 @@
+Fitter Status : Successful - Sat Sep 30 17:14:26 2023
+Quartus Prime Version : 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+Revision Name : SPWM_60
+Top-level Entity Name : TopLevel
+Family : Cyclone IV E
+Device : EP4CE6E22C8L
+Timing Models : Final
+Total logic elements : 288 / 6,272 ( 5 % )
+    Total combinational functions : 288 / 6,272 ( 5 % )
+    Dedicated logic registers : 123 / 6,272 ( 2 % )
+Total registers : 123
+Total pins : 13 / 92 ( 14 % )
+Total virtual pins : 0
+Total memory bits : 153,600 / 276,480 ( 56 % )
+Embedded Multiplier 9-bit elements : 0 / 30 ( 0 % )
+Total PLLs : 0 / 2 ( 0 % )

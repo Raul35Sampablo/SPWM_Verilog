@@ -1,0 +1,68 @@
+module selector(
+
+//input modo, 
+ouput wire[11:0] selection
+output reg [10:0] q_ondas
+
+);
+
+reg[2:0] modo;
+modo = 3'b00;
+//Inicializamos la variable i en genvar la cual esta se resetara uando termine end endgenerate	
+genvar i;	//Para repetir la cantidad de veces que se repetira la onda
+genvar n;	//quien seleccionara la memoria para mostrar la onda
+
+always @(posedge clk) begin
+
+	//Creamos 2 casos, uno para el de 8 bits y otro para el de 10 Bits
+	case (modo)
+		3'b00: begin	// 8 bits
+			
+			// De manera ascendente 30 veces
+			generate				
+				for(i = 0; i < 30; i = i + 1) begin			
+					for(n = 0; n < 3839; n = n + 1) begin
+						selection <= n;						
+					end
+					q_ondas <= i;
+				end			
+			endgenerate
+			
+			//De manera descendente 30 veces
+			generate				
+				for(i = 0; i < 30; i = i + 1) begin
+					for(n = 0; n < 3839; n = n + 1) begin
+						selection <= 38389 - n;						
+					end
+					q_ondas <= i;
+				end			
+			endgenerate	
+
+		end
+
+		3'b01: begin
+		
+			// De manera ascendente 30 veces
+			generate				
+				for(i = 0; i < 30; i = i + 1) begin			
+					for(n = 0; n < 15359; n = n + 1) begin
+						selection <= n;						
+					end			
+				end			
+			endgenerate
+			
+			//De manera descendente 30 veces
+			generate				
+				for(i = 0; i < 30; i = i + 1) begin
+					for(n = 0; n < 15359; n = n + 1) begin
+						selection <= 15359 - n;						
+					end			
+				end			
+			endgenerate
+
+		end
+
+	endcase
+
+
+end 

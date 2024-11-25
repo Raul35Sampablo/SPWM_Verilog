@@ -1,0 +1,29 @@
+module signal(
+
+	input clk,
+	input [16:0] q_onda,
+	output reg[16:0] signal
+
+);
+
+reg modo = 1'b0;		//1'b0 corresponde a 8 bits, y 1'b1 a 10 bits
+
+always @(posedge clk)begin
+
+
+	case(modo)
+	
+		1'b0: begin
+			if()
+	
+		end
+	
+		1'b1 begin
+	
+		end
+		
+	endcase
+
+
+end
+

@@ -1,0 +1,11 @@
+module multiplicacion(
+
+	input [16:0] digito1,
+	input [16:0] digito2,
+	output [16:0] result_1_2
+
+);
+
+assign result_1_2 = digito1 * digito2;
+
+endmodule

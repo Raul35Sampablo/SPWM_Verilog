@@ -1,0 +1,30 @@
+module TopLevel(
+	input wire clk,
+);
+
+wire [11:0] input_signal_top;
+wire [13:0]; q_onda_top;
+wire [selectores]; selectores;
+
+mem2 inst_mem2(
+	.clk(clk),
+	.output_data_2(input_signal_top),
+	.selector2(selectores)
+);
+
+signal inst_signal(
+	.clk(clk),
+	.q_onda(q_onda_top),
+	.selection(selectores)
+
+);
+
+contador1 inst_contador1(
+	.clk(clk),
+	.q_onda(q_onda_top)
+
+
+);
+
+
+

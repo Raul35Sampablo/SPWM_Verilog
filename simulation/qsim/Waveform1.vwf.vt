@@ -1,0 +1,225 @@
+// Copyright (C) 2022  Intel Corporation. All rights reserved.
+// Your use of Intel Corporation's design tools, logic functions 
+// and other software and tools, and any partner logic 
+// functions, and any output files from any of the foregoing 
+// (including device programming or simulation files), and any 
+// associated documentation or information are expressly subject 
+// to the terms and conditions of the Intel Program License 
+// Subscription Agreement, the Intel Quartus Prime License Agreement,
+// the Intel FPGA IP License Agreement, or other applicable license
+// agreement, including, without limitation, that your use is for
+// the sole purpose of programming logic devices manufactured by
+// Intel and sold by Intel or its authorized distributors.  Please
+// refer to the applicable agreement for further details, at
+// https://fpgasoftware.intel.com/eula.
+
+// *****************************************************************************
+// This file contains a Verilog test bench with test vectors .The test vectors  
+// are exported from a vector file in the Quartus Waveform Editor and apply to  
+// the top level entity of the current Quartus project .The user can use this   
+// testbench to simulate his design using a third-party simulation tool .       
+// *****************************************************************************
+// Generated on "08/31/2023 01:23:29"
+                                                                                
+// Verilog Test Bench (with test vectors) for design :                          division
+// 
+// Simulation tool : 3rd Party
+// 
+
+`timescale 1 ps/ 1 ps
+module division_vlg_vec_tst();
+// constants                                           
+// general purpose registers
+reg [16:0] dividendo;
+reg [16:0] divisor;
+// wires                                               
+wire [16:0] resultado;
+
+// assign statements (if any)                          
+division i1 (
+// port map - connection between master ports and signals/registers   
+	.dividendo(dividendo),
+	.divisor(divisor),
+	.resultado(resultado)
+);
+initial 
+begin 
+#1000000 $finish;
+end 
+// dividendo[ 16 ]
+initial
+begin
+	dividendo[16] = 1'b0;
+end 
+// dividendo[ 15 ]
+initial
+begin
+	dividendo[15] = 1'b0;
+end 
+// dividendo[ 14 ]
+initial
+begin
+	dividendo[14] = 1'b0;
+end 
+// dividendo[ 13 ]
+initial
+begin
+	dividendo[13] = 1'b1;
+	dividendo[13] = #70000 1'b0;
+end 
+// dividendo[ 12 ]
+initial
+begin
+	dividendo[12] = 1'b1;
+	dividendo[12] = #70000 1'b0;
+end 
+// dividendo[ 11 ]
+initial
+begin
+	dividendo[11] = 1'b1;
+	dividendo[11] = #70000 1'b0;
+end 
+// dividendo[ 10 ]
+initial
+begin
+	dividendo[10] = 1'b1;
+	dividendo[10] = #70000 1'b0;
+end 
+// dividendo[ 9 ]
+initial
+begin
+	dividendo[9] = 1'b0;
+end 
+// dividendo[ 8 ]
+initial
+begin
+	dividendo[8] = 1'b0;
+end 
+// dividendo[ 7 ]
+initial
+begin
+	dividendo[7] = 1'b0;
+end 
+// dividendo[ 6 ]
+initial
+begin
+	dividendo[6] = 1'b0;
+end 
+// dividendo[ 5 ]
+initial
+begin
+	dividendo[5] = 1'b0;
+end 
+// dividendo[ 4 ]
+initial
+begin
+	dividendo[4] = 1'b0;
+end 
+// dividendo[ 3 ]
+initial
+begin
+	dividendo[3] = 1'b0;
+end 
+// dividendo[ 2 ]
+initial
+begin
+	dividendo[2] = 1'b0;
+end 
+// dividendo[ 1 ]
+initial
+begin
+	dividendo[1] = 1'b0;
+end 
+// dividendo[ 0 ]
+initial
+begin
+	dividendo[0] = 1'b0;
+end 
+// divisor[ 16 ]
+initial
+begin
+	divisor[16] = 1'b0;
+end 
+// divisor[ 15 ]
+initial
+begin
+	divisor[15] = 1'b0;
+end 
+// divisor[ 14 ]
+initial
+begin
+	divisor[14] = 1'b0;
+end 
+// divisor[ 13 ]
+initial
+begin
+	divisor[13] = 1'b0;
+end 
+// divisor[ 12 ]
+initial
+begin
+	divisor[12] = 1'b0;
+end 
+// divisor[ 11 ]
+initial
+begin
+	divisor[11] = 1'b0;
+end 
+// divisor[ 10 ]
+initial
+begin
+	divisor[10] = 1'b0;
+end 
+// divisor[ 9 ]
+initial
+begin
+	divisor[9] = 1'b0;
+end 
+// divisor[ 8 ]
+initial
+begin
+	divisor[8] = 1'b0;
+end 
+// divisor[ 7 ]
+initial
+begin
+	divisor[7] = 1'b0;
+end 
+// divisor[ 6 ]
+initial
+begin
+	divisor[6] = 1'b0;
+end 
+// divisor[ 5 ]
+initial
+begin
+	divisor[5] = 1'b0;
+end 
+// divisor[ 4 ]
+initial
+begin
+	divisor[4] = 1'b0;
+end 
+// divisor[ 3 ]
+initial
+begin
+	divisor[3] = 1'b0;
+end 
+// divisor[ 2 ]
+initial
+begin
+	divisor[2] = 1'b1;
+	divisor[2] = #70000 1'b0;
+end 
+// divisor[ 1 ]
+initial
+begin
+	divisor[1] = 1'b0;
+end 
+// divisor[ 0 ]
+initial
+begin
+	divisor[0] = 1'b0;
+end 
+endmodule
+

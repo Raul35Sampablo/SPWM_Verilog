@@ -1,0 +1,644 @@
+Analysis & Synthesis report for SPWM_60
+Sat Sep 30 17:14:02 2023
+Quartus Prime Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Analysis & Synthesis RAM Summary
+  9. User-Specified and Inferred Latches
+ 10. General Register Statistics
+ 11. Inverted Register Statistics
+ 12. Registers Packed Into Inferred Megafunctions
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Source assignments for mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated
+ 15. Parameter Settings for Inferred Entity Instance: mem2:inst_mem2|altsyncram:mem2_rtl_0
+ 16. altsyncram Parameter Settings by Entity Instance
+ 17. Port Connectivity Checks: "contador1:inst_contador1"
+ 18. Port Connectivity Checks: "Decrementador:inst_dec"
+ 19. Port Connectivity Checks: "Incrementador:inst_inc"
+ 20. Port Connectivity Checks: "mem2:inst_mem2"
+ 21. Port Connectivity Checks: "signal:inst_signal"
+ 22. Post-Synthesis Netlist Statistics for Top Partition
+ 23. Elapsed Time Per Partition
+ 24. Analysis & Synthesis Messages
+ 25. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2022  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                        ;
++------------------------------------+------------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Sat Sep 30 17:14:02 2023          ;
+; Quartus Prime Version              ; 22.1std.0 Build 915 10/25/2022 SC Lite Edition ;
+; Revision Name                      ; SPWM_60                                        ;
+; Top-level Entity Name              ; TopLevel                                       ;
+; Family                             ; Cyclone IV E                                   ;
+; Total logic elements               ; 289                                            ;
+;     Total combinational functions  ; 288                                            ;
+;     Dedicated logic registers      ; 123                                            ;
+; Total registers                    ; 123                                            ;
+; Total pins                         ; 13                                             ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 153,600                                        ;
+; Embedded Multiplier 9-bit elements ; 0                                              ;
+; Total PLLs                         ; 0                                              ;
++------------------------------------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                              ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                           ; Setting            ; Default Value      ;
++------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                           ; EP4CE6E22C8L       ;                    ;
+; Top-level entity name                                            ; TopLevel           ; SPWM_60            ;
+; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
+; Use smart compilation                                            ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                      ; Off                ; Off                ;
+; Restructure Multiplexers                                         ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                              ; Off                ; Off                ;
+; Preserve fewer node names                                        ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                    ; Enable             ; Enable             ;
+; Verilog Version                                                  ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                     ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                         ; Auto               ; Auto               ;
+; Safe State Machine                                               ; Off                ; Off                ;
+; Extract Verilog State Machines                                   ; On                 ; On                 ;
+; Extract VHDL State Machines                                      ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                       ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                   ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                          ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                        ; On                 ; On                 ;
+; Parallel Synthesis                                               ; On                 ; On                 ;
+; DSP Block Balancing                                              ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                               ; On                 ; On                 ;
+; Power-Up Don't Care                                              ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                     ; Off                ; Off                ;
+; Remove Duplicate Registers                                       ; On                 ; On                 ;
+; Ignore CARRY Buffers                                             ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                           ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                            ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                        ; Off                ; Off                ;
+; Ignore LCELL Buffers                                             ; Off                ; Off                ;
+; Ignore SOFT Buffers                                              ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                   ; Off                ; Off                ;
+; Optimization Technique                                           ; Balanced           ; Balanced           ;
+; Carry Chain Length                                               ; 70                 ; 70                 ;
+; Auto Carry Chains                                                ; On                 ; On                 ;
+; Auto Open-Drain Pins                                             ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                            ; Off                ; Off                ;
+; Auto ROM Replacement                                             ; On                 ; On                 ;
+; Auto RAM Replacement                                             ; On                 ; On                 ;
+; Auto DSP Block Replacement                                       ; On                 ; On                 ;
+; Auto Shift Register Replacement                                  ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                  ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                    ; On                 ; On                 ;
+; Strict RAM Replacement                                           ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                           ; Off                ; Off                ;
+; Auto RAM Block Balancing                                         ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                ; Off                ; Off                ;
+; Auto Resource Sharing                                            ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                               ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                    ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing              ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                ; Off                ; Off                ;
+; Timing-Driven Synthesis                                          ; On                 ; On                 ;
+; Report Parameter Settings                                        ; On                 ; On                 ;
+; Report Source Assignments                                        ; On                 ; On                 ;
+; Report Connectivity Checks                                       ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                               ; Off                ; Off                ;
+; Synchronization Register Chain Length                            ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
+; HDL message level                                                ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                  ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report         ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report               ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report        ; 100                ; 100                ;
+; Clock MUX Protection                                             ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                      ; Off                ; Off                ;
+; Block Design Naming                                              ; Auto               ; Auto               ;
+; SDC constraint protection                                        ; Off                ; Off                ;
+; Synthesis Effort                                                 ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal     ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                             ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                               ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                      ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                           ; On                 ; On                 ;
++------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 4           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processors 2-4         ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                    ;
++-------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path    ; Used in Netlist ; File Type                                             ; File Name with Absolute Path                                                    ; Library ;
++-------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------+---------+
+; mem2.v                              ; yes             ; User Verilog HDL File                                 ; C:/Users/rraul/Documents/SPWM/mem2.v                                            ;         ;
+; contador1.v                         ; yes             ; User Verilog HDL File                                 ; C:/Users/rraul/Documents/SPWM/contador1.v                                       ;         ;
+; signal.v                            ; yes             ; User Verilog HDL File                                 ; C:/Users/rraul/Documents/SPWM/signal.v                                          ;         ;
+; TopLevel.v                          ; yes             ; User Verilog HDL File                                 ; C:/Users/rraul/Documents/SPWM/TopLevel.v                                        ;         ;
+; Incrementador.v                     ; yes             ; User Verilog HDL File                                 ; C:/Users/rraul/Documents/SPWM/Incrementador.v                                   ;         ;
+; Decrementador.v                     ; yes             ; User Verilog HDL File                                 ; C:/Users/rraul/Documents/SPWM/Decrementador.v                                   ;         ;
+; altsyncram.tdf                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
+; stratix_ram_block.inc               ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
+; lpm_mux.inc                         ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
+; lpm_decode.inc                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
+; aglobal221.inc                      ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/aglobal221.inc        ;         ;
+; a_rdenreg.inc                       ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
+; altrom.inc                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altrom.inc            ;         ;
+; altram.inc                          ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altram.inc            ;         ;
+; altdpram.inc                        ; yes             ; Megafunction                                          ; c:/intelfpga_lite/22.1std/quartus/libraries/megafunctions/altdpram.inc          ;         ;
+; db/altsyncram_ve61.tdf              ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rraul/Documents/SPWM/db/altsyncram_ve61.tdf                            ;         ;
+; db/spwm_60.ram0_mem2_392d20.hdl.mif ; yes             ; Auto-Generated Auto-Found Memory Initialization File  ; C:/Users/rraul/Documents/SPWM/db/spwm_60.ram0_mem2_392d20.hdl.mif               ;         ;
+; db/decode_c8a.tdf                   ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rraul/Documents/SPWM/db/decode_c8a.tdf                                 ;         ;
+; db/mux_cob.tdf                      ; yes             ; Auto-Generated Megafunction                           ; C:/Users/rraul/Documents/SPWM/db/mux_cob.tdf                                    ;         ;
++-------------------------------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary             ;
++---------------------------------------------+-----------+
+; Resource                                    ; Usage     ;
++---------------------------------------------+-----------+
+; Estimated Total logic elements              ; 289       ;
+;                                             ;           ;
+; Total combinational functions               ; 288       ;
+; Logic element usage by number of LUT inputs ;           ;
+;     -- 4 input functions                    ; 95        ;
+;     -- 3 input functions                    ; 65        ;
+;     -- <=2 input functions                  ; 128       ;
+;                                             ;           ;
+; Logic elements by mode                      ;           ;
+;     -- normal mode                          ; 169       ;
+;     -- arithmetic mode                      ; 119       ;
+;                                             ;           ;
+; Total registers                             ; 123       ;
+;     -- Dedicated logic registers            ; 123       ;
+;     -- I/O registers                        ; 0         ;
+;                                             ;           ;
+; I/O pins                                    ; 13        ;
+; Total memory bits                           ; 153600    ;
+;                                             ;           ;
+; Embedded Multiplier 9-bit elements          ; 0         ;
+;                                             ;           ;
+; Maximum fan-out node                        ; clk~input ;
+; Maximum fan-out                             ; 143       ;
+; Total fan-out                               ; 1479      ;
+; Average fan-out                             ; 3.24      ;
++---------------------------------------------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+-----------------+--------------+
+; Compilation Hierarchy Node                ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name     ; Library Name ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+-----------------+--------------+
+; |TopLevel                                 ; 288 (0)             ; 123 (0)                   ; 153600      ; 0            ; 0       ; 0         ; 13   ; 0            ; |TopLevel                                                                                  ; TopLevel        ; work         ;
+;    |Decrementador:inst_dec|               ; 64 (64)             ; 39 (39)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopLevel|Decrementador:inst_dec                                                           ; Decrementador   ; work         ;
+;    |Incrementador:inst_inc|               ; 48 (48)             ; 26 (26)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopLevel|Incrementador:inst_inc                                                           ; Incrementador   ; work         ;
+;    |contador1:inst_contador1|             ; 123 (123)           ; 55 (55)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopLevel|contador1:inst_contador1                                                         ; contador1       ; work         ;
+;    |mem2:inst_mem2|                       ; 10 (0)              ; 1 (0)                     ; 153600      ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopLevel|mem2:inst_mem2                                                                   ; mem2            ; work         ;
+;       |altsyncram:mem2_rtl_0|             ; 10 (0)              ; 1 (0)                     ; 153600      ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopLevel|mem2:inst_mem2|altsyncram:mem2_rtl_0                                             ; altsyncram      ; work         ;
+;          |altsyncram_ve61:auto_generated| ; 10 (0)              ; 1 (1)                     ; 153600      ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopLevel|mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated              ; altsyncram_ve61 ; work         ;
+;             |mux_cob:mux2|                ; 10 (10)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopLevel|mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|mux_cob:mux2 ; mux_cob         ; work         ;
+;    |signal:inst_signal|                   ; 43 (43)             ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |TopLevel|signal:inst_signal                                                               ; signal          ; work         ;
++-------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+-----------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                        ;
++--------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------------------------+
+; Name                                                                           ; Type ; Mode ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF                                 ;
++--------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------------------------+
+; mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|ALTSYNCRAM ; AUTO ; ROM  ; 15360        ; 10           ; --           ; --           ; 153600 ; db/SPWM_60.ram0_mem2_392d20.hdl.mif ;
++--------------------------------------------------------------------------------+------+------+--------------+--------------+--------------+--------------+--------+-------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                         ;
++-----------------------------------------------------+------------------------------+------------------------+
+; Latch Name                                          ; Latch Enable Signal          ; Free of Timing Hazards ;
++-----------------------------------------------------+------------------------------+------------------------+
+; signal:inst_signal|conteo[9]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; signal:inst_signal|conteo[8]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; signal:inst_signal|conteo[7]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; signal:inst_signal|conteo[6]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; signal:inst_signal|conteo[5]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; signal:inst_signal|conteo[4]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; signal:inst_signal|conteo[3]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; signal:inst_signal|conteo[2]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; signal:inst_signal|conteo[1]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; signal:inst_signal|conteo[0]                        ; signal:inst_signal|LessThan0 ; yes                    ;
+; Number of user-specified and inferred latches = 10  ;                              ;                        ;
++-----------------------------------------------------+------------------------------+------------------------+
+Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 123   ;
+; Number of registers using Synchronous Clear  ; 22    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 63    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; contador1:inst_contador1|en_inc        ; 21      ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++-----------------------------------------------------------------------+
+; Registers Packed Into Inferred Megafunctions                          ;
++------------------------------------+---------------------------+------+
+; Register Name                      ; Megafunction              ; Type ;
++------------------------------------+---------------------------+------+
+; mem2:inst_mem2|output_data_2[0..9] ; mem2:inst_mem2|mem2_rtl_0 ; RAM  ;
++------------------------------------+---------------------------+------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |TopLevel|contador1:inst_contador1|contador[1]     ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 28 LEs               ; 0 LEs                  ; Yes        ; |TopLevel|contador1:inst_contador1|cont_in_dec[10] ;
+; 3:1                ; 15 bits   ; 30 LEs        ; 15 LEs               ; 15 LEs                 ; Yes        ; |TopLevel|Incrementador:inst_inc|i[0]              ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |TopLevel|Incrementador:inst_inc|contador[4]       ;
+; 3:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |TopLevel|Decrementador:inst_dec|i[0]              ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |TopLevel|Decrementador:inst_dec|contador[10]      ;
+; 4:1                ; 14 bits   ; 28 LEs        ; 14 LEs               ; 14 LEs                 ; Yes        ; |TopLevel|contador1:inst_contador1|cont_in_inc[12] ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 14 LEs               ; 28 LEs                 ; Yes        ; |TopLevel|contador1:inst_contador1|salida[9]       ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------+
+; Source assignments for mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated ;
++---------------------------------+--------------------+------+------------------------------+
+; Assignment                      ; Value              ; From ; To                           ;
++---------------------------------+--------------------+------+------------------------------+
+; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                            ;
++---------------------------------+--------------------+------+------------------------------+
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for Inferred Entity Instance: mem2:inst_mem2|altsyncram:mem2_rtl_0     ;
++------------------------------------+-------------------------------------+----------------+
+; Parameter Name                     ; Value                               ; Type           ;
++------------------------------------+-------------------------------------+----------------+
+; BYTE_SIZE_BLOCK                    ; 8                                   ; Untyped        ;
+; AUTO_CARRY_CHAINS                  ; ON                                  ; AUTO_CARRY     ;
+; IGNORE_CARRY_BUFFERS               ; OFF                                 ; IGNORE_CARRY   ;
+; AUTO_CASCADE_CHAINS                ; ON                                  ; AUTO_CASCADE   ;
+; IGNORE_CASCADE_BUFFERS             ; OFF                                 ; IGNORE_CASCADE ;
+; WIDTH_BYTEENA                      ; 1                                   ; Untyped        ;
+; OPERATION_MODE                     ; ROM                                 ; Untyped        ;
+; WIDTH_A                            ; 10                                  ; Untyped        ;
+; WIDTHAD_A                          ; 14                                  ; Untyped        ;
+; NUMWORDS_A                         ; 15360                               ; Untyped        ;
+; OUTDATA_REG_A                      ; UNREGISTERED                        ; Untyped        ;
+; ADDRESS_ACLR_A                     ; NONE                                ; Untyped        ;
+; OUTDATA_ACLR_A                     ; NONE                                ; Untyped        ;
+; WRCONTROL_ACLR_A                   ; NONE                                ; Untyped        ;
+; INDATA_ACLR_A                      ; NONE                                ; Untyped        ;
+; BYTEENA_ACLR_A                     ; NONE                                ; Untyped        ;
+; WIDTH_B                            ; 1                                   ; Untyped        ;
+; WIDTHAD_B                          ; 1                                   ; Untyped        ;
+; NUMWORDS_B                         ; 1                                   ; Untyped        ;
+; INDATA_REG_B                       ; CLOCK1                              ; Untyped        ;
+; WRCONTROL_WRADDRESS_REG_B          ; CLOCK1                              ; Untyped        ;
+; RDCONTROL_REG_B                    ; CLOCK1                              ; Untyped        ;
+; ADDRESS_REG_B                      ; CLOCK1                              ; Untyped        ;
+; OUTDATA_REG_B                      ; UNREGISTERED                        ; Untyped        ;
+; BYTEENA_REG_B                      ; CLOCK1                              ; Untyped        ;
+; INDATA_ACLR_B                      ; NONE                                ; Untyped        ;
+; WRCONTROL_ACLR_B                   ; NONE                                ; Untyped        ;
+; ADDRESS_ACLR_B                     ; NONE                                ; Untyped        ;
+; OUTDATA_ACLR_B                     ; NONE                                ; Untyped        ;
+; RDCONTROL_ACLR_B                   ; NONE                                ; Untyped        ;
+; BYTEENA_ACLR_B                     ; NONE                                ; Untyped        ;
+; WIDTH_BYTEENA_A                    ; 1                                   ; Untyped        ;
+; WIDTH_BYTEENA_B                    ; 1                                   ; Untyped        ;
+; RAM_BLOCK_TYPE                     ; AUTO                                ; Untyped        ;
+; BYTE_SIZE                          ; 8                                   ; Untyped        ;
+; READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                           ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_A      ; NEW_DATA_NO_NBE_READ                ; Untyped        ;
+; READ_DURING_WRITE_MODE_PORT_B      ; NEW_DATA_NO_NBE_READ                ; Untyped        ;
+; INIT_FILE                          ; db/SPWM_60.ram0_mem2_392d20.hdl.mif ; Untyped        ;
+; INIT_FILE_LAYOUT                   ; PORT_A                              ; Untyped        ;
+; MAXIMUM_DEPTH                      ; 0                                   ; Untyped        ;
+; CLOCK_ENABLE_INPUT_A               ; NORMAL                              ; Untyped        ;
+; CLOCK_ENABLE_INPUT_B               ; NORMAL                              ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_A              ; NORMAL                              ; Untyped        ;
+; CLOCK_ENABLE_OUTPUT_B              ; NORMAL                              ; Untyped        ;
+; CLOCK_ENABLE_CORE_A                ; USE_INPUT_CLKEN                     ; Untyped        ;
+; CLOCK_ENABLE_CORE_B                ; USE_INPUT_CLKEN                     ; Untyped        ;
+; ENABLE_ECC                         ; FALSE                               ; Untyped        ;
+; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                               ; Untyped        ;
+; WIDTH_ECCSTATUS                    ; 3                                   ; Untyped        ;
+; DEVICE_FAMILY                      ; Cyclone IV E                        ; Untyped        ;
+; CBXI_PARAMETER                     ; altsyncram_ve61                     ; Untyped        ;
++------------------------------------+-------------------------------------+----------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------+
+; altsyncram Parameter Settings by Entity Instance                                 ;
++-------------------------------------------+--------------------------------------+
+; Name                                      ; Value                                ;
++-------------------------------------------+--------------------------------------+
+; Number of entity instances                ; 1                                    ;
+; Entity Instance                           ; mem2:inst_mem2|altsyncram:mem2_rtl_0 ;
+;     -- OPERATION_MODE                     ; ROM                                  ;
+;     -- WIDTH_A                            ; 10                                   ;
+;     -- NUMWORDS_A                         ; 15360                                ;
+;     -- OUTDATA_REG_A                      ; UNREGISTERED                         ;
+;     -- WIDTH_B                            ; 1                                    ;
+;     -- NUMWORDS_B                         ; 1                                    ;
+;     -- ADDRESS_REG_B                      ; CLOCK1                               ;
+;     -- OUTDATA_REG_B                      ; UNREGISTERED                         ;
+;     -- RAM_BLOCK_TYPE                     ; AUTO                                 ;
+;     -- READ_DURING_WRITE_MODE_MIXED_PORTS ; DONT_CARE                            ;
++-------------------------------------------+--------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "contador1:inst_contador1"                                                                                                                                                      ;
++-------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                                                                                                                 ;
++-------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; salida      ; Output ; Warning  ; Output or bidir port (15 bits) is wider than the port expression (14 bits) it drives; bit(s) "salida[14..14]" have no fanouts                                           ;
+; cnt_inc     ; Input  ; Warning  ; Input port expression (14 bits) is smaller than the input port (15 bits) it drives.  Extra input bit(s) "cnt_inc[14..14]" will be connected to GND.                     ;
+; cnt_dec     ; Input  ; Warning  ; Input port expression (14 bits) is smaller than the input port (15 bits) it drives.  Extra input bit(s) "cnt_dec[14..14]" will be connected to GND.                     ;
+; cont_in_inc ; Output ; Warning  ; Output or bidir port (14 bits) is smaller than the port expression (17 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
+; cont_in_dec ; Output ; Warning  ; Output or bidir port (14 bits) is smaller than the port expression (17 bits) it drives.  The 3 most-significant bit(s) in the port expression will be connected to GND. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Decrementador:inst_dec"                                                                                                         ;
++--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; Port   ; Type   ; Severity ; Details                                                                                                                       ;
++--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+; salida ; Output ; Warning  ; Output or bidir port (15 bits) is wider than the port expression (14 bits) it drives; bit(s) "salida[14..14]" have no fanouts ;
++--------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Incrementador:inst_inc"                                                                                                  ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                  ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+; i    ; Output ; Warning  ; Output or bidir port (15 bits) is wider than the port expression (14 bits) it drives; bit(s) "i[14..14]" have no fanouts ;
++------+--------+----------+--------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mem2:inst_mem2"                                                                                                                                           ;
++-----------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port      ; Type  ; Severity ; Details                                                                                                                                               ;
++-----------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+; selector2 ; Input ; Warning  ; Input port expression (14 bits) is smaller than the input port (15 bits) it drives.  Extra input bit(s) "selector2[14..14]" will be connected to GND. ;
++-----------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "signal:inst_signal"                                                                                                                                                                              ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port               ; Type   ; Severity ; Details                                                                                                                                                                            ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; cont_in_inc        ; Input  ; Warning  ; Input port expression (17 bits) is wider than the input port (14 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; cont_in_dec        ; Input  ; Warning  ; Input port expression (17 bits) is wider than the input port (14 bits) it drives.  The 3 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; bits_maximo        ; Output ; Warning  ; Output or bidir port (17 bits) is wider than the port expression (1 bits) it drives; bit(s) "bits_maximo[16..1]" have no fanouts                                                   ;
+; bits_maximo        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; contador           ; Output ; Warning  ; Output or bidir port (17 bits) is wider than the port expression (1 bits) it drives; bit(s) "contador[16..1]" have no fanouts                                                      ;
+; contador           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                ;
+; resultado_division ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (17 bits) it drives.  Extra input bit(s) "resultado_division[16..1]" will be connected to GND.                       ;
+; res_inc            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (17 bits) it drives.  Extra input bit(s) "res_inc[16..1]" will be connected to GND.                                  ;
+; res_dec            ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (17 bits) it drives.  Extra input bit(s) "res_dec[16..1]" will be connected to GND.                                  ;
+; modo_signal        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                           ;
++--------------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 13                          ;
+; cycloneiii_ff         ; 123                         ;
+;     ENA               ; 63                          ;
+;     SCLR              ; 22                          ;
+;     plain             ; 38                          ;
+; cycloneiii_lcell_comb ; 288                         ;
+;     arith             ; 119                         ;
+;         2 data inputs ; 92                          ;
+;         3 data inputs ; 27                          ;
+;     normal            ; 169                         ;
+;         1 data inputs ; 8                           ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 38                          ;
+;         4 data inputs ; 95                          ;
+; cycloneiii_ram_block  ; 20                          ;
+;                       ;                             ;
+; Max LUT depth         ; 9.50                        ;
+; Average LUT depth     ; 4.91                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:01     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Processing started: Sat Sep 30 17:13:30 2023
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SPWM_60 -c SPWM_60
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file mem1.v
+    Info (12023): Found entity 1: mem1 File: C:/Users/rraul/Documents/SPWM/mem1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mem2.v
+    Info (12023): Found entity 1: mem2 File: C:/Users/rraul/Documents/SPWM/mem2.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file contador1.v
+    Info (12023): Found entity 1: contador1 File: C:/Users/rraul/Documents/SPWM/contador1.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file signal.v
+    Info (12023): Found entity 1: signal File: C:/Users/rraul/Documents/SPWM/signal.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file toplevel.v
+    Info (12023): Found entity 1: TopLevel File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file incrementador.v
+    Info (12023): Found entity 1: Incrementador File: C:/Users/rraul/Documents/SPWM/Incrementador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file decrementador.v
+    Info (12023): Found entity 1: Decrementador File: C:/Users/rraul/Documents/SPWM/Decrementador.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file division.v
+    Info (12023): Found entity 1: division File: C:/Users/rraul/Documents/SPWM/division.v Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file multiplicacion.v
+    Info (12023): Found entity 1: multiplicacion File: C:/Users/rraul/Documents/SPWM/multiplicacion.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at TopLevel.v(69): created implicit net for "dividendo" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 69
+Warning (10236): Verilog HDL Implicit Net warning at TopLevel.v(70): created implicit net for "divisor" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 70
+Warning (10236): Verilog HDL Implicit Net warning at TopLevel.v(71): created implicit net for "resultado" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 71
+Warning (10236): Verilog HDL Implicit Net warning at TopLevel.v(75): created implicit net for "res_inc" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 75
+Warning (10236): Verilog HDL Implicit Net warning at TopLevel.v(76): created implicit net for "res_dec" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 76
+Info (12127): Elaborating entity "TopLevel" for the top level hierarchy
+Info (12128): Elaborating entity "signal" for hierarchy "signal:inst_signal" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 80
+Warning (10230): Verilog HDL assignment warning at signal.v(29): truncated value with size 32 to match size of target (10) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 29
+Warning (10240): Verilog HDL Always Construct warning at signal.v(34): inferring latch(es) for variable "conteo", which holds its previous value in one or more paths through the always construct File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Warning (10034): Output port "bits_maximo" at signal.v(15) has no driver File: C:/Users/rraul/Documents/SPWM/signal.v Line: 15
+Warning (10034): Output port "modo_signal" at signal.v(11) has no driver File: C:/Users/rraul/Documents/SPWM/signal.v Line: 11
+Info (10041): Inferred latch for "conteo[0]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (10041): Inferred latch for "conteo[1]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (10041): Inferred latch for "conteo[2]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (10041): Inferred latch for "conteo[3]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (10041): Inferred latch for "conteo[4]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (10041): Inferred latch for "conteo[5]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (10041): Inferred latch for "conteo[6]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (10041): Inferred latch for "conteo[7]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (10041): Inferred latch for "conteo[8]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (10041): Inferred latch for "conteo[9]" at signal.v(34) File: C:/Users/rraul/Documents/SPWM/signal.v Line: 34
+Info (12128): Elaborating entity "mem2" for hierarchy "mem2:inst_mem2" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 86
+Warning (10030): Net "mem2.data_a" at mem2.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/rraul/Documents/SPWM/mem2.v Line: 9
+Warning (10030): Net "mem2.waddr_a" at mem2.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/rraul/Documents/SPWM/mem2.v Line: 9
+Warning (10030): Net "mem2.we_a" at mem2.v(9) has no driver or initial value, using a default initial value '0' File: C:/Users/rraul/Documents/SPWM/mem2.v Line: 9
+Info (12128): Elaborating entity "Incrementador" for hierarchy "Incrementador:inst_inc" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 92
+Warning (10230): Verilog HDL assignment warning at Incrementador.v(38): truncated value with size 32 to match size of target (11) File: C:/Users/rraul/Documents/SPWM/Incrementador.v Line: 38
+Warning (10230): Verilog HDL assignment warning at Incrementador.v(41): truncated value with size 32 to match size of target (15) File: C:/Users/rraul/Documents/SPWM/Incrementador.v Line: 41
+Info (12128): Elaborating entity "Decrementador" for hierarchy "Decrementador:inst_dec" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 98
+Warning (10230): Verilog HDL assignment warning at Decrementador.v(37): truncated value with size 32 to match size of target (11) File: C:/Users/rraul/Documents/SPWM/Decrementador.v Line: 37
+Warning (10230): Verilog HDL assignment warning at Decrementador.v(40): truncated value with size 32 to match size of target (14) File: C:/Users/rraul/Documents/SPWM/Decrementador.v Line: 40
+Warning (10230): Verilog HDL assignment warning at Decrementador.v(41): truncated value with size 32 to match size of target (15) File: C:/Users/rraul/Documents/SPWM/Decrementador.v Line: 41
+Info (12128): Elaborating entity "contador1" for hierarchy "contador1:inst_contador1" File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 109
+Warning (10230): Verilog HDL assignment warning at contador1.v(29): truncated value with size 32 to match size of target (11) File: C:/Users/rraul/Documents/SPWM/contador1.v Line: 29
+Warning (10230): Verilog HDL assignment warning at contador1.v(33): truncated value with size 32 to match size of target (14) File: C:/Users/rraul/Documents/SPWM/contador1.v Line: 33
+Warning (10230): Verilog HDL assignment warning at contador1.v(73): truncated value with size 32 to match size of target (11) File: C:/Users/rraul/Documents/SPWM/contador1.v Line: 73
+Warning (10230): Verilog HDL assignment warning at contador1.v(77): truncated value with size 32 to match size of target (14) File: C:/Users/rraul/Documents/SPWM/contador1.v Line: 77
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "conteo_incrementos[16]" is missing source, defaulting to GND File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 20
+    Warning (12110): Net "conteo_incrementos[15]" is missing source, defaulting to GND File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 20
+    Warning (12110): Net "conteo_incrementos[14]" is missing source, defaulting to GND File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 20
+    Warning (12110): Net "conteo_decrementos[16]" is missing source, defaulting to GND File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 21
+    Warning (12110): Net "conteo_decrementos[15]" is missing source, defaulting to GND File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 21
+    Warning (12110): Net "conteo_decrementos[14]" is missing source, defaulting to GND File: C:/Users/rraul/Documents/SPWM/TopLevel.v Line: 21
+Info (19000): Inferred 1 megafunctions from design logic
+    Info (276029): Inferred altsyncram megafunction from the following design logic: "mem2:inst_mem2|mem2_rtl_0" 
+        Info (286033): Parameter OPERATION_MODE set to ROM
+        Info (286033): Parameter WIDTH_A set to 10
+        Info (286033): Parameter WIDTHAD_A set to 14
+        Info (286033): Parameter NUMWORDS_A set to 15360
+        Info (286033): Parameter OUTDATA_REG_A set to UNREGISTERED
+        Info (286033): Parameter ADDRESS_ACLR_A set to NONE
+        Info (286033): Parameter OUTDATA_ACLR_A set to NONE
+        Info (286033): Parameter INDATA_ACLR_A set to NONE
+        Info (286033): Parameter WRCONTROL_ACLR_A set to NONE
+        Info (286033): Parameter INIT_FILE set to db/SPWM_60.ram0_mem2_392d20.hdl.mif
+Info (12130): Elaborated megafunction instantiation "mem2:inst_mem2|altsyncram:mem2_rtl_0"
+Info (12133): Instantiated megafunction "mem2:inst_mem2|altsyncram:mem2_rtl_0" with the following parameter:
+    Info (12134): Parameter "OPERATION_MODE" = "ROM"
+    Info (12134): Parameter "WIDTH_A" = "10"
+    Info (12134): Parameter "WIDTHAD_A" = "14"
+    Info (12134): Parameter "NUMWORDS_A" = "15360"
+    Info (12134): Parameter "OUTDATA_REG_A" = "UNREGISTERED"
+    Info (12134): Parameter "ADDRESS_ACLR_A" = "NONE"
+    Info (12134): Parameter "OUTDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "INDATA_ACLR_A" = "NONE"
+    Info (12134): Parameter "WRCONTROL_ACLR_A" = "NONE"
+    Info (12134): Parameter "INIT_FILE" = "db/SPWM_60.ram0_mem2_392d20.hdl.mif"
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ve61.tdf
+    Info (12023): Found entity 1: altsyncram_ve61 File: C:/Users/rraul/Documents/SPWM/db/altsyncram_ve61.tdf Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_c8a.tdf
+    Info (12023): Found entity 1: decode_c8a File: C:/Users/rraul/Documents/SPWM/db/decode_c8a.tdf Line: 23
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_cob.tdf
+    Info (12023): Found entity 1: mux_cob File: C:/Users/rraul/Documents/SPWM/db/mux_cob.tdf Line: 23
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file C:/Users/rraul/Documents/SPWM/output_files/SPWM_60.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 322 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 1 input pins
+    Info (21059): Implemented 12 output pins
+    Info (21061): Implemented 289 logic cells
+    Info (21064): Implemented 20 RAM segments
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 30 warnings
+    Info: Peak virtual memory: 4811 megabytes
+    Info: Processing ended: Sat Sep 30 17:14:02 2023
+    Info: Elapsed time: 00:00:32
+    Info: Total CPU time (on all processors): 00:00:35
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in C:/Users/rraul/Documents/SPWM/output_files/SPWM_60.map.smsg.
+
+

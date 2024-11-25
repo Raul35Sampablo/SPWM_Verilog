@@ -1,0 +1,1542 @@
+Determining the location of the ModelSim executable...
+
+Using: C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both Questa Intel FPGA Edition and ModelSim executables are available, Questa Intel FPGA Edition will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SPWM_60 -c SPWM_60 --vector_source="C:/Users/rraul/Documents/SPWM/Waveform3.vwf" --testbench_file="C:/Users/rraul/Documents/SPWM/simulation/qsim/Waveform3.vwf.vt"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Copyright (C) 2022  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Thu Aug 31 21:47:46 2023
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=verilog --write_settings_files=off SPWM_60 -c SPWM_60 --vector_source=C:/Users/rraul/Documents/SPWM/Waveform3.vwf --testbench_file=C:/Users/rraul/Documents/SPWM/simulation/qsim/Waveform3.vwf.vt
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+ design
+
+design
+
+design
+
+[5]" in design
+
+ign
+
+dor1|salida[10]" in design
+
+(201007): Can't find port "Decrementador:inst_dec|salida[4]" in design
+
+'t find port "division:inst_division|divisor[3]" in design
+
+Incrementador:inst_inc|i[11]~reg0" in design
+
+dr_a[4]" in design
+
+st_mem2|selector2[2]" in design
+
+): Can't find port "multiplicacion:inst_multiplicacion|digito2_1[3]" in design
+
+ignal:inst_signal|SPWM_1~reg0" in design
+
+t "signal:inst_signal|divisiones[15]" in design
+
+5]" in design
+
+Completed successfully. 
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory="C:/Users/rraul/Documents/SPWM/simulation/qsim/" SPWM_60 -c SPWM_60
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 22.1std.0 Build 915 10/25/2022 SC Lite Edition
+    Info: Copyright (C) 2022  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Thu Aug 31 21:47:47 2023
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=verilog --output_directory=C:/Users/rraul/Documents/SPWM/simulation/qsim/ SPWM_60 -c SPWM_60
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file SPWM_60.vo in folder "C:/Users/rraul/Documents/SPWM/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4644 megabytes
+    Info: Processing ended: Thu Aug 31 21:47:48 2023
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+C:/Users/rraul/Documents/SPWM/simulation/qsim/SPWM_60.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+C:/intelFPGA_lite/20.1/modelsim_ase/win32aloem/vsim -c -do SPWM_60.do
+
+Reading pref.tcl
+
+
+# 2020.1
+
+
+# do SPWM_60.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+# Start time: 21:47:49 on Aug 31,2023
+# vlog -work work SPWM_60.vo 
+
+# -- Compiling module TopLevel
+
+# -- Compiling module hard_block
+
+# 
+
+# Top level modules:
+# 	TopLevel
+
+# End time: 21:47:49 on Aug 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+# Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+# Start time: 21:47:49 on Aug 31,2023
+# vlog -work work Waveform3.vwf.vt 
+
+# -- Compiling module TopLevel_vlg_vec_tst
+
+# 
+
+# Top level modules:
+# 	TopLevel_vlg_vec_tst
+
+# End time: 21:47:49 on Aug 31,2023, Elapsed time: 0:00:00
+
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.TopLevel_vlg_vec_tst 
+# Start time: 21:47:49 on Aug 31,2023
+# Loading work.TopLevel_vlg_vec_tst
+# Loading work.TopLevel
+# Loading work.hard_block
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_clkctrl
+# Loading cycloneive_ver.cycloneive_mux41
+# Loading cycloneive_ver.cycloneive_ena_reg
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading altera_ver.dffeas
+# Loading cycloneive_ver.cycloneive_ram_block
+# Loading cycloneive_ver.cycloneive_ram_register
+# Loading cycloneive_ver.cycloneive_ram_pulse_generator
+# Loading altera_ver.PRIM_GDFF_LOW
+
+# after#26
+
+# ** Note: $finish    : Waveform3.vwf.vt(49)
+#    Time: 1 us  Iteration: 0  Instance: /TopLevel_vlg_vec_tst
+
+# End time: 21:47:49 on Aug 31,2023, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading C:/Users/rraul/Documents/SPWM/Waveform3.vwf...
+
+Reading C:/Users/rraul/Documents/SPWM/simulation/qsim/SPWM_60.msim.vcd...
+
+Processing channel transitions... 
+
+Warning: conteo_decrementos[16] - signal not found in VCD.
+
+Warning: conteo_decrementos[15] - signal not found in VCD.
+
+Warning: conteo_decrementos[14] - signal not found in VCD.
+
+Warning: conteo_decrementos[13] - signal not found in VCD.
+
+Warning: conteo_decrementos[12] - signal not found in VCD.
+
+Warning: conteo_decrementos[11] - signal not found in VCD.
+
+Warning: conteo_decrementos[10] - signal not found in VCD.
+
+Warning: conteo_decrementos[9] - signal not found in VCD.
+
+Warning: conteo_decrementos[8] - signal not found in VCD.
+
+Warning: conteo_decrementos[7] - signal not found in VCD.
+
+Warning: conteo_decrementos[6] - signal not found in VCD.
+
+Warning: conteo_decrementos[5] - signal not found in VCD.
+
+Warning: conteo_decrementos[4] - signal not found in VCD.
+
+Warning: conteo_decrementos[3] - signal not found in VCD.
+
+Warning: conteo_decrementos[2] - signal not found in VCD.
+
+Warning: conteo_decrementos[1] - signal not found in VCD.
+
+Warning: conteo_decrementos[0] - signal not found in VCD.
+
+Warning: conteo_incrementos[16] - signal not found in VCD.
+
+Warning: conteo_incrementos[15] - signal not found in VCD.
+
+Warning: conteo_incrementos[14] - signal not found in VCD.
+
+Warning: conteo_incrementos[13] - signal not found in VCD.
+
+Warning: conteo_incrementos[12] - signal not found in VCD.
+
+Warning: conteo_incrementos[11] - signal not found in VCD.
+
+Warning: conteo_incrementos[10] - signal not found in VCD.
+
+Warning: conteo_incrementos[9] - signal not found in VCD.
+
+Warning: conteo_incrementos[8] - signal not found in VCD.
+
+Warning: conteo_incrementos[7] - signal not found in VCD.
+
+Warning: conteo_incrementos[6] - signal not found in VCD.
+
+Warning: conteo_incrementos[5] - signal not found in VCD.
+
+Warning: conteo_incrementos[4] - signal not found in VCD.
+
+Warning: conteo_incrementos[3] - signal not found in VCD.
+
+Warning: conteo_incrementos[2] - signal not found in VCD.
+
+Warning: conteo_incrementos[1] - signal not found in VCD.
+
+Warning: conteo_incrementos[0] - signal not found in VCD.
+
+Warning: dividendo[16] - signal not found in VCD.
+
+Warning: dividendo[15] - signal not found in VCD.
+
+Warning: dividendo[14] - signal not found in VCD.
+
+Warning: dividendo[13] - signal not found in VCD.
+
+Warning: dividendo[12] - signal not found in VCD.
+
+Warning: dividendo[11] - signal not found in VCD.
+
+Warning: dividendo[10] - signal not found in VCD.
+
+Warning: dividendo[9] - signal not found in VCD.
+
+Warning: dividendo[8] - signal not found in VCD.
+
+Warning: dividendo[7] - signal not found in VCD.
+
+Warning: dividendo[6] - signal not found in VCD.
+
+Warning: dividendo[5] - signal not found in VCD.
+
+Warning: dividendo[4] - signal not found in VCD.
+
+Warning: dividendo[3] - signal not found in VCD.
+
+Warning: dividendo[2] - signal not found in VCD.
+
+Warning: dividendo[1] - signal not found in VCD.
+
+Warning: dividendo[0] - signal not found in VCD.
+
+Warning: divisor[16] - signal not found in VCD.
+
+Warning: divisor[15] - signal not found in VCD.
+
+Warning: divisor[14] - signal not found in VCD.
+
+Warning: divisor[13] - signal not found in VCD.
+
+Warning: divisor[12] - signal not found in VCD.
+
+Warning: divisor[11] - signal not found in VCD.
+
+Warning: divisor[10] - signal not found in VCD.
+
+Warning: divisor[9] - signal not found in VCD.
+
+Warning: divisor[8] - signal not found in VCD.
+
+Warning: divisor[7] - signal not found in VCD.
+
+Warning: divisor[6] - signal not found in VCD.
+
+Warning: divisor[5] - signal not found in VCD.
+
+Warning: divisor[4] - signal not found in VCD.
+
+Warning: divisor[3] - signal not found in VCD.
+
+Warning: divisor[2] - signal not found in VCD.
+
+Warning: divisor[1] - signal not found in VCD.
+
+Warning: divisor[0] - signal not found in VCD.
+
+Warning: en1 - signal not found in VCD.
+
+Warning: en2 - signal not found in VCD.
+
+Warning: input_signal_top[11] - signal not found in VCD.
+
+Warning: input_signal_top[10] - signal not found in VCD.
+
+Warning: input_signal_top[9] - signal not found in VCD.
+
+Warning: input_signal_top[8] - signal not found in VCD.
+
+Warning: input_signal_top[7] - signal not found in VCD.
+
+Warning: input_signal_top[6] - signal not found in VCD.
+
+Warning: input_signal_top[5] - signal not found in VCD.
+
+Warning: input_signal_top[4] - signal not found in VCD.
+
+Warning: input_signal_top[3] - signal not found in VCD.
+
+Warning: input_signal_top[2] - signal not found in VCD.
+
+Warning: input_signal_top[1] - signal not found in VCD.
+
+Warning: input_signal_top[0] - signal not found in VCD.
+
+Warning: contador1:inst_contador1 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec - signal not found in VCD.
+
+Warning: division:inst_division - signal not found in VCD.
+
+Warning: Incrementador:inst_inc - signal not found in VCD.
+
+Warning: mem2:inst_mem2 - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion - signal not found in VCD.
+
+Warning: signal:inst_signal - signal not found in VCD.
+
+Warning: q_onda_top[13] - signal not found in VCD.
+
+Warning: q_onda_top[12] - signal not found in VCD.
+
+Warning: q_onda_top[11] - signal not found in VCD.
+
+Warning: q_onda_top[10] - signal not found in VCD.
+
+Warning: q_onda_top[9] - signal not found in VCD.
+
+Warning: q_onda_top[8] - signal not found in VCD.
+
+Warning: q_onda_top[7] - signal not found in VCD.
+
+Warning: q_onda_top[6] - signal not found in VCD.
+
+Warning: q_onda_top[5] - signal not found in VCD.
+
+Warning: q_onda_top[4] - signal not found in VCD.
+
+Warning: q_onda_top[3] - signal not found in VCD.
+
+Warning: q_onda_top[2] - signal not found in VCD.
+
+Warning: q_onda_top[1] - signal not found in VCD.
+
+Warning: q_onda_top[0] - signal not found in VCD.
+
+Warning: res_dec[16] - signal not found in VCD.
+
+Warning: res_dec[15] - signal not found in VCD.
+
+Warning: res_dec[14] - signal not found in VCD.
+
+Warning: res_dec[13] - signal not found in VCD.
+
+Warning: res_dec[12] - signal not found in VCD.
+
+Warning: res_dec[11] - signal not found in VCD.
+
+Warning: res_dec[10] - signal not found in VCD.
+
+Warning: res_dec[9] - signal not found in VCD.
+
+Warning: res_dec[8] - signal not found in VCD.
+
+Warning: res_dec[7] - signal not found in VCD.
+
+Warning: res_dec[6] - signal not found in VCD.
+
+Warning: res_dec[5] - signal not found in VCD.
+
+Warning: res_dec[4] - signal not found in VCD.
+
+Warning: res_dec[3] - signal not found in VCD.
+
+Warning: res_dec[2] - signal not found in VCD.
+
+Warning: res_dec[1] - signal not found in VCD.
+
+Warning: res_dec[0] - signal not found in VCD.
+
+Warning: res_inc[16] - signal not found in VCD.
+
+Warning: res_inc[15] - signal not found in VCD.
+
+Warning: res_inc[14] - signal not found in VCD.
+
+Warning: res_inc[13] - signal not found in VCD.
+
+Warning: res_inc[12] - signal not found in VCD.
+
+Warning: res_inc[11] - signal not found in VCD.
+
+Warning: res_inc[10] - signal not found in VCD.
+
+Warning: res_inc[9] - signal not found in VCD.
+
+Warning: res_inc[8] - signal not found in VCD.
+
+Warning: res_inc[7] - signal not found in VCD.
+
+Warning: res_inc[6] - signal not found in VCD.
+
+Warning: res_inc[5] - signal not found in VCD.
+
+Warning: res_inc[4] - signal not found in VCD.
+
+Warning: res_inc[3] - signal not found in VCD.
+
+Warning: res_inc[2] - signal not found in VCD.
+
+Warning: res_inc[1] - signal not found in VCD.
+
+Warning: res_inc[0] - signal not found in VCD.
+
+Warning: resultado[16] - signal not found in VCD.
+
+Warning: resultado[15] - signal not found in VCD.
+
+Warning: resultado[14] - signal not found in VCD.
+
+Warning: resultado[13] - signal not found in VCD.
+
+Warning: resultado[12] - signal not found in VCD.
+
+Warning: resultado[11] - signal not found in VCD.
+
+Warning: resultado[10] - signal not found in VCD.
+
+Warning: resultado[9] - signal not found in VCD.
+
+Warning: resultado[8] - signal not found in VCD.
+
+Warning: resultado[7] - signal not found in VCD.
+
+Warning: resultado[6] - signal not found in VCD.
+
+Warning: resultado[5] - signal not found in VCD.
+
+Warning: resultado[4] - signal not found in VCD.
+
+Warning: resultado[3] - signal not found in VCD.
+
+Warning: resultado[2] - signal not found in VCD.
+
+Warning: resultado[1] - signal not found in VCD.
+
+Warning: resultado[0] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[11] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[10] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[9] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[8] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[7] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[6] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[5] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[4] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[3] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[2] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[1] - signal not found in VCD.
+
+Warning: salida_contador_ic_dec[0] - signal not found in VCD.
+
+Warning: salida_dec[11] - signal not found in VCD.
+
+Warning: salida_dec[10] - signal not found in VCD.
+
+Warning: salida_dec[9] - signal not found in VCD.
+
+Warning: salida_dec[8] - signal not found in VCD.
+
+Warning: salida_dec[7] - signal not found in VCD.
+
+Warning: salida_dec[6] - signal not found in VCD.
+
+Warning: salida_dec[5] - signal not found in VCD.
+
+Warning: salida_dec[4] - signal not found in VCD.
+
+Warning: salida_dec[3] - signal not found in VCD.
+
+Warning: salida_dec[2] - signal not found in VCD.
+
+Warning: salida_dec[1] - signal not found in VCD.
+
+Warning: salida_dec[0] - signal not found in VCD.
+
+Warning: salida_inc[11] - signal not found in VCD.
+
+Warning: salida_inc[10] - signal not found in VCD.
+
+Warning: salida_inc[9] - signal not found in VCD.
+
+Warning: salida_inc[8] - signal not found in VCD.
+
+Warning: salida_inc[7] - signal not found in VCD.
+
+Warning: salida_inc[6] - signal not found in VCD.
+
+Warning: salida_inc[5] - signal not found in VCD.
+
+Warning: salida_inc[4] - signal not found in VCD.
+
+Warning: salida_inc[3] - signal not found in VCD.
+
+Warning: salida_inc[2] - signal not found in VCD.
+
+Warning: salida_inc[1] - signal not found in VCD.
+
+Warning: salida_inc[0] - signal not found in VCD.
+
+Warning: selectores[13] - signal not found in VCD.
+
+Warning: selectores[12] - signal not found in VCD.
+
+Warning: selectores[11] - signal not found in VCD.
+
+Warning: selectores[10] - signal not found in VCD.
+
+Warning: selectores[9] - signal not found in VCD.
+
+Warning: selectores[8] - signal not found in VCD.
+
+Warning: selectores[7] - signal not found in VCD.
+
+Warning: selectores[6] - signal not found in VCD.
+
+Warning: selectores[5] - signal not found in VCD.
+
+Warning: selectores[4] - signal not found in VCD.
+
+Warning: selectores[3] - signal not found in VCD.
+
+Warning: selectores[2] - signal not found in VCD.
+
+Warning: selectores[1] - signal not found in VCD.
+
+Warning: selectores[0] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|Add0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|Add1 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|Equal0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|Equal1 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|LessThan0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|LessThan1 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|always0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|clk - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[11] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[10] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[9] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[8] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[7] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[6] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[5] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[4] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[3] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[2] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[1] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_dec[0] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[11] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[10] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[9] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[8] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[7] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[6] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[5] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[4] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[3] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[2] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[1] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cnt_inc[0] - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[0]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[1]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[2]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[3]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[4]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[5]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[6]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[7]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[8]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[9]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[10]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_dec[11]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[0]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[1]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[2]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[3]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[4]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[5]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[6]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[7]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[8]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[9]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[10]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|cont_in_inc[11]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|en_dec~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|en_inc~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[0]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[1]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[2]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[3]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[4]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[5]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[6]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[7]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[8]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[9]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[10]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[11]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[12]~reg0 - signal not found in VCD.
+
+Warning: contador1:inst_contador1|salida[13]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|Add0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|Equal0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|LessThan0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|always0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|clk - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|en - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[0]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[1]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[2]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[3]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[4]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[5]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[6]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[7]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[8]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[9]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[10]~reg0 - signal not found in VCD.
+
+Warning: Decrementador:inst_dec|salida[11]~reg0 - signal not found in VCD.
+
+Warning: division:inst_division|Div0 - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[16] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[15] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[14] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[13] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[12] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[11] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[10] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[9] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[8] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[7] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[6] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[5] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[4] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[3] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[2] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[1] - signal not found in VCD.
+
+Warning: division:inst_division|dividendo[0] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[16] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[15] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[14] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[13] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[12] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[11] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[10] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[9] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[8] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[7] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[6] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[5] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[4] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[3] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[2] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[1] - signal not found in VCD.
+
+Warning: division:inst_division|divisor[0] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[16] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[15] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[14] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[13] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[12] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[11] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[10] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[9] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[8] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[7] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[6] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[5] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[4] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[3] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[2] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[1] - signal not found in VCD.
+
+Warning: division:inst_division|resultado[0] - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|Add0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|Equal0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|LessThan0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|always0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|clk - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|en - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[0]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[1]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[2]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[3]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[4]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[5]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[6]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[7]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[8]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[9]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[10]~reg0 - signal not found in VCD.
+
+Warning: Incrementador:inst_inc|i[11]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|clk - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[11] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[10] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[9] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[8] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[7] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[6] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[5] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[4] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[3] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[2] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[1] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.data_a[0] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[11] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[10] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[9] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[8] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[7] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[6] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[5] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[4] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[3] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[2] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[1] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.q_a[0] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[13] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[12] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[11] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[10] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[9] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[8] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[7] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[6] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[5] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[4] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[3] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[2] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[1] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.raddr_a[0] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[13] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[12] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[11] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[10] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[9] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[8] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[7] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[6] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[5] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[4] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[3] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[2] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[1] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2.waddr_a[0] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT1 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT2 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT3 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT4 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT5 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT6 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT7 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT8 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT9 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT10 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|mem2~DATAOUT11 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[11] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[10] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[9] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[8] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[7] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[6] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[5] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[4] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[3] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[2] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[1] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[0] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[0]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[1]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[2]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[3]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[4]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[5]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[6]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[7]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[8]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[9]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[10]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|output_data_2[11]~reg0 - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[13] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[12] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[11] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[10] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[9] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[8] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[7] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[6] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[5] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[4] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[3] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[2] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[1] - signal not found in VCD.
+
+Warning: mem2:inst_mem2|selector2[0] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|Add0 - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|lpm_mult:Mult0 - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|Mult1 - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[13] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[12] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[11] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[10] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[9] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[8] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[7] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[6] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[5] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[4] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[3] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[2] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[1] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_dec[0] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[13] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[12] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[11] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[10] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[9] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[8] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[7] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[6] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[5] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[4] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[3] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[2] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[1] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|cont_in_inc[0] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[10] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[9] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[8] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[7] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[6] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[5] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[4] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[3] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[2] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[1] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_1[0] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[10] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[9] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[8] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[7] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[6] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[5] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[4] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[3] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[2] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[1] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|digito2_2[0] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[10] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[9] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[8] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[7] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[6] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[5] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[4] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[3] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[2] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[1] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_1_2[0] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[10] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[9] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[8] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[7] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[6] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[5] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[4] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[3] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[2] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[1] - signal not found in VCD.
+
+Warning: multiplicacion:inst_multiplicacion|result_2_2[0] - signal not found in VCD.
+
+Warning: signal:inst_signal|LessThan0 - signal not found in VCD.
+
+Warning: signal:inst_signal|LessThan1 - signal not found in VCD.
+
+Warning: signal:inst_signal|LessThan2 - signal not found in VCD.
+
+Warning: signal:inst_signal|SPWM_1 - signal not found in VCD.
+
+Warning: signal:inst_signal|SPWM_1~reg0 - signal not found in VCD.
+
+Warning: signal:inst_signal|SPWM_2~reg0 - signal not found in VCD.
+
+Warning: signal:inst_signal|always0 - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[16] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[15] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[14] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[13] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[12] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[11] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[10] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[9] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[8] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[7] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[6] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[5] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[4] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[3] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[2] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[1] - signal not found in VCD.
+
+Warning: signal:inst_signal|cantidad_datos[0] - signal not found in VCD.
+
+Warning: signal:inst_signal|clk - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[11] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[10] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[9] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[8] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[7] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[6] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[5] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[4] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[3] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[2] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[1] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_dec[0] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[11] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[10] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[9] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[8] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[7] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[6] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[5] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[4] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[3] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[2] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[1] - signal not found in VCD.
+
+Warning: signal:inst_signal|cont_in_inc[0] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[16] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[15] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[14] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[13] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[12] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[11] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[10] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[9] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[8] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[7] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[6] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[5] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[4] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[3] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[2] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[1] - signal not found in VCD.
+
+Warning: signal:inst_signal|divisiones[0] - signal not found in VCD.
+
+Warning: signal:inst_signal|en_dec - signal not found in VCD.
+
+Warning: signal:inst_signal|en_inc - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[11] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[10] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[9] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[8] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[7] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[6] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[5] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[4] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[3] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[2] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[1] - signal not found in VCD.
+
+Warning: signal:inst_signal|input_signal[0] - signal not found in VCD.
+
+Warning: signal:inst_signal|modo_signal - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[16] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[15] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[14] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[13] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[12] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[11] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[10] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[9] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[8] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[7] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[6] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[5] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[4] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[3] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[2] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[1] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_dec[0] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[16] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[15] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[14] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[13] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[12] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[11] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[10] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[9] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[8] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[7] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[6] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[5] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[4] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[3] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[2] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[1] - signal not found in VCD.
+
+Warning: signal:inst_signal|res_inc[0] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[16] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[15] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[14] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[13] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[12] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[11] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[10] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[9] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[8] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[7] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[6] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[5] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[4] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[3] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[2] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[1] - signal not found in VCD.
+
+Warning: signal:inst_signal|resultado_division[0] - signal not found in VCD.
+
+Writing the resulting VWF to C:/Users/rraul/Documents/SPWM/simulation/qsim/SPWM_60_20230831214750.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

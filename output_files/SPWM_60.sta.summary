@@ -1,0 +1,77 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1000mV 85C Model Setup 'clk'
+Slack : -10.784
+TNS   : -755.394
+
+Type  : Slow 1000mV 85C Model Setup 'mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|address_reg_a[0]'
+Slack : -10.542
+TNS   : -72.911
+
+Type  : Slow 1000mV 85C Model Hold 'mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|address_reg_a[0]'
+Slack : -0.266
+TNS   : -0.905
+
+Type  : Slow 1000mV 85C Model Hold 'clk'
+Slack : 0.529
+TNS   : 0.000
+
+Type  : Slow 1000mV 85C Model Minimum Pulse Width 'clk'
+Slack : -4.000
+TNS   : -299.849
+
+Type  : Slow 1000mV 85C Model Minimum Pulse Width 'mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|address_reg_a[0]'
+Slack : -0.451
+TNS   : -12.923
+
+Type  : Slow 1000mV 0C Model Setup 'clk'
+Slack : -10.005
+TNS   : -723.765
+
+Type  : Slow 1000mV 0C Model Setup 'mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|address_reg_a[0]'
+Slack : -9.844
+TNS   : -68.125
+
+Type  : Slow 1000mV 0C Model Hold 'mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|address_reg_a[0]'
+Slack : -0.201
+TNS   : -0.495
+
+Type  : Slow 1000mV 0C Model Hold 'clk'
+Slack : 0.507
+TNS   : 0.000
+
+Type  : Slow 1000mV 0C Model Minimum Pulse Width 'clk'
+Slack : -4.000
+TNS   : -299.849
+
+Type  : Slow 1000mV 0C Model Minimum Pulse Width 'mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|address_reg_a[0]'
+Slack : -0.407
+TNS   : -11.435
+
+Type  : Fast 1000mV 0C Model Setup 'clk'
+Slack : -5.082
+TNS   : -365.993
+
+Type  : Fast 1000mV 0C Model Setup 'mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|address_reg_a[0]'
+Slack : -5.049
+TNS   : -34.775
+
+Type  : Fast 1000mV 0C Model Hold 'mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|address_reg_a[0]'
+Slack : -0.195
+TNS   : -0.910
+
+Type  : Fast 1000mV 0C Model Hold 'clk'
+Slack : 0.286
+TNS   : 0.000
+
+Type  : Fast 1000mV 0C Model Minimum Pulse Width 'clk'
+Slack : -4.000
+TNS   : -301.543
+
+Type  : Fast 1000mV 0C Model Minimum Pulse Width 'mem2:inst_mem2|altsyncram:mem2_rtl_0|altsyncram_ve61:auto_generated|address_reg_a[0]'
+Slack : -0.156
+TNS   : -2.463
+
+------------------------------------------------------------
